@@ -1,3 +1,4 @@
+THIS CODE BREAKS AT FINDING SMALLEST FACTOR OF 35 IT DOESN'T WORK IT JUST PAST A FEW TESTS AND I THOUGHT IT DID
 # find_smallest_factor
 Finds the smallest factor in a composite number might help crack rsa the bank encryption scheme
 My program fundamental found a way to get the smallest factor of a number

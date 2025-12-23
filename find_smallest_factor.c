@@ -21,8 +21,10 @@ int main(int argc,char *argv[])
   int compositei;
   mpz_t composite,rop1,rop2,op1,op2;
   mpz_init(rop1);
+  mpz_init(op1);
   mpz_set_ui(op1,2);
   mpz_init(op2);
+  mpz_init(rop2);
   mpz_init_set_str(composite,argv[1],10);
   compositei=atoi(argv[1])-1;
   mpz_mul_2exp(rop1,op1,compositei);

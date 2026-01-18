@@ -32,6 +32,6 @@ uint_t euclid_calc_gcd(uint_t x,uint_t y)
 int main(int argc,char *argv[])
 {
   uint_t  compositei=atoi(argv[1]),num2;
-  num2=(2ULL<<(compositei-1))-2;
+  num2=(1ULL<<(compositei))-2;
   printf("%d\n",euclid_calc_gcd(num2,compositei));
 }

@@ -15,22 +15,47 @@ However it might be a corallory of the fermat primality test https://en.wikipedi
 #include <math.h>
 #include <string.h>
 #include <gmp.h>
+int getsmallestfactor(unsigned int composite)
+{
+  int idx,root=sqrt(composite),smallestfactor=composite;
+   for(idx=2;idx<=root;idx++)
+   {
+     
+      if((composite%idx)==0)
+      {
+	smallestfactor=idx;
+	break;
+      }
+   }
+   return smallestfactor;
+}
+
 
 int main(int argc,char *argv[])
 {
-  int compositei;
+  int lo_composite_i,hi_composite_i,composite_i;
   mpz_t composite,rop1,rop2,op1,op2;
+  if(argc!=3)
+    {
+      fprintf(stderr,"findsmallestfactor lo_int hi_int\n");
+      exit(-1);
+    }	
   mpz_init(rop1);
   mpz_init(op1);
   mpz_set_ui(op1,2);
   mpz_init(op2);
   mpz_init(rop2);
-  mpz_init_set_str(composite,argv[1],10);
-  compositei=atoi(argv[1])-1;
-  mpz_mul_2exp(rop1,op1,compositei);
-  mpz_sub_ui(rop1,rop1,2);
-  mpz_gcd(rop2,composite,rop1);
-  printf("\n");
-  mpz_out_str(stdout,10,rop2);
-  printf("\n");
+  lo_composite_i=atoi(argv[1]);
+  hi_composite_i=atoi(argv[2]);
+   for(composite_i=lo_composite_i;composite_i<=hi_composite_i;composite_i++)
+    {
+      mpz_init_set_ui(composite,composite_i);
+      mpz_mul_2exp(rop1,op1,composite_i-1);
+      mpz_sub_ui(rop1,rop1,2);
+      mpz_gcd(rop2,composite,rop1);
+      printf("%d ",composite_i);
+      mpz_out_str(stdout,10,rop2);
+      printf(" %d",getsmallestfactor(composite_i));
+      printf("\n");
+    }
 }

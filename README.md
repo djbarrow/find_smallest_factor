@@ -1,5 +1,7 @@
-THIS CODE BREAKS AT FINDING SMALLEST FACTOR OF 35 IT DOESN'T WORK IT JUST PAST A FEW TESTS AND I THOUGHT IT DID IT MIGHT GET MOST OF THE SMALLEST FACTORS LIKE THE PSEODOPRIME TEST
-# find_smallest_factor
+This program finds the smallest factor of every number between 2 and 27 and most numbers greater than 28
+to see a simplified version of the routine look at find_smallest_factor2.c
+the find_smallest_factor.c version prints the calculated smallest factor the real factor and the
+number of cycles calculating the gcd for the smallest factor attempt between a low int and a high int in a loop. 
 In my opinion RSA is cracked
 
 Finds the smallest factor in a composite number might help crack rsa the bank encryption scheme
@@ -22,6 +24,6 @@ I believe this is cracked the prize challenge numbers on the rsa website are no 
 
 I'm aware of a back dooor in https security library in chrome GnuTLS findable by any fool willing to read or ask google.
 
-If they can do a question answer differential equation on the entire of google called chatgpt what hope has 2048 bit factorisation to a hacker.
+If they can do a question answer differential equation on the entire of internet called chatgpt, what hope has 2048 bit factorisation to a hacker.
 
 The nature of the hacker is the bigger the puzzle the more likely it will be cracked hackers love puzzles. I've a buddy Segher who learned russian to read a number theory book.

@@ -1,6 +1,6 @@
-This program finds the smallest factor of every number between 2 and 27 and most numbers greater than 28
-to see a simplified version of the routine look at find_smallest_factor2.c
-the find_smallest_factor.c version prints the calculated smallest factor the real factor and the
+This program finds the smallest factor of every number between 2 and 27, and most numbers greater than 28,
+to see a simplified version of the routine look at find_smallest_factor2.c.
+The find_smallest_factor.c version prints the calculated smallest factor the real smallest factor and the
 number of cycles calculating the gcd for the smallest factor attempt between a low int and a high int in a loop. 
 In my opinion RSA is cracked
 

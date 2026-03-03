@@ -2,7 +2,7 @@
 CC=gcc
 OBJFILES = \
 find_smallest_factor.o
-CFLAGS= -g -DLINUX 
+CFLAGS= -g -DLINUX -msse2 
 #CFLAGS=-O2 -g
 LINKFLAGS =
 LIBS = -lm -lgmp

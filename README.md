@@ -2,6 +2,28 @@ This program finds the smallest factor of every number between 2 and 27, and mos
 to see a simplified version of the routine look at find_smallest_factor2.c.
 The find_smallest_factor.c version prints the calculated smallest factor the real smallest factor and the
 number of cycles calculating the gcd for the smallest factor attempt between a low int and a high int in a loop. It's related to fermat's little theorem i.e. pseudoprimes in that it fails at pseudoprime values & others.
+find_smallest_facor fails at 28 & 35
+(1<<28)-2
+	268435454
+factor 268435454
+268435454: 2 7 73 262657
+2*7 is a factor of 28 so gcd=14 rather than 2
+
+
+(1<<35)-2
+	34359738366
+factor 34359738366
+34359738366: 2 3 43691 131071
+2 & 3 don't go into 5 leaving 1 as the gcd
+it also fails at pseudoprimes of 2
+The first few base-2 pseudoprimes include:
+(341) ((11 times 31))
+(561) ((3 times 11 times 17))
+(645) ((3 times 5 times 43))
+(1105) ((5 times 13 times 17))
+(1387) ((19 times 73))
+(1729) ((7 times 13 times 19))
+If euclid did a least common divisor it only wouldn't fail at 28.
 In my opinion RSA is cracked
 
 Finds the smallest factor in a composite number might help crack rsa the bank encryption scheme
